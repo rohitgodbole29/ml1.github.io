@@ -95,6 +95,10 @@ pred<-predict(modFit,dat_val3)
 confusionMatrix(pred,dat_val3$classe)
 ```
 
+## Out of sample Error : An estimate can be provided based on the accuracy in prediction on the Val dat set.
+We notice that the 95% CI is (0.8806 ,1). This means that the in the worst case we are 95% confident that the accuracy wont be lower 
+than 88%. That gives us a mean accuracy of about 94% or an expected error of about 6%.
+
 
 
 ## Model2 : Build a Naive Bayes Model 
@@ -198,14 +202,6 @@ cast2<- cast1%>%select(-one_of(drop.cols1))
 table(cast2)
 
 ```
-
-## As we have seen above the Random Forest / Boosting give us the best machine learning algorithm for the data in question.
-
-
-
-
-
-
 
 
 
